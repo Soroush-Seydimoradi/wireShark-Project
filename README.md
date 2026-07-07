@@ -28,7 +28,7 @@ Faculty of Engineering — Department of Computer Engineering and Information Te
 
 ### 1.1 Method
 
-1. Wireshark was opened and the active network interface (` Wi-Fi]`) was selected and capture was started.
+1. Wireshark was opened and the active network interface (` Wi-Fi `) was selected and capture was started.
 2. The following command was executed in the terminal:
    ```
    curl http://neverssl.com
@@ -39,7 +39,7 @@ Faculty of Engineering — Department of Computer Engineering and Information Te
 ### 1.2 Output
 
 - Capture file name: `captures/phase1.pcapng`
-- Number of packets recorded: [909]
+- Number of packets recorded: 909
 
 ---
 
@@ -80,13 +80,13 @@ http
 
 ### 3.1 Server Response Packet
 
-- Response status line: `[HTTP/1.1 200 OK]`
-- Status code: `[200]`
+- Response status line: `HTTP/1.1 200 OK`
+- Status code: `200`
 - Meaning of the status code: [Successful request and content returned]
 
 ### 3.2 Time Delta (RTT)
 
-- Recorded Time Delta value: `[5.004620700 seconds]`
+- Recorded Time Delta value: `5.004620700 seconds`
 - Location of this value in Wireshark: the `[Time since request]` field in Hypertext Transfer Protocol.
 - Interpretation: this value corresponds to the RTT (Round Trip Time) between sending the request from the client and receiving the first byte of the response from the server.
 
@@ -153,15 +153,13 @@ python3 scripts/parse_http_pcap.py captures/phase1.pcapng
 .
 ├── README.md
 ├── captures/
-│   └── [file_name].pcapng
+│   └── phase1.pcapng
 ├── scripts/
 │   └── parse_http_pcap.py
 └── screenshots/
-    ├── phase1_capture_start.png
     ├── phase2_layer7_headers.png
     ├── phase2_layer4_ports.png
     ├── phase2_layer3_ip.png
-    ├── phase3_status_code.png
-    ├── phase3_time_delta.png
+    ├── phase3_status_code_time_delta.png
     └── phase4_script_output.png
 ```
